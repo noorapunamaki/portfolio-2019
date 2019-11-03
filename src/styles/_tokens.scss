@@ -1,9 +1,43 @@
 $color-white: #f9f2f3;
 $color-black: #25292b;
 $color-aqua: #00aeef;
+$color-pink: #fc7fb2;
 
 $color-background: $color-white;
 $color-text: $color-black;
+$color-border: transparentize($color-text, 0.75);
 
 $color-background-inverted: $color-black;
 $color-text-inverted: $color-white;
+$color-border-inverted: transparentize($color-text-inverted, 0.9);
+
+$color-action: $color-aqua;
+$color-accent: $color-pink;
+
+$color-text-action-inverted: lighten($color-action, 40%);
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+$font-stack: 'Lato', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-weight-body: 400;
+$font-weight-heading: 900;
+$font-weight-link: 700;
+
+$space-unit: 0.25rem;
+
+$space-xxs: $space-unit / 2;
+$space-xs: $space-unit;
+$space-s: $space-unit * 2;
+$space-m: $space-unit * 4;
+$space-l: $space-unit * 8;
+
+$size-hairline: $space-unit / 4;
+$size-tiny: $space-unit / 2;
+$size-indicator: $space-unit;
+
+$border: $size-hairline solid $color-border;
+$border-inverted: $size-hairline solid $color-border-inverted;

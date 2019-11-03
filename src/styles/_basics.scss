@@ -1,13 +1,49 @@
 body {
   background: $color-background;
   color: $color-text;
+  font: $font-weight-body 100%/1.5 $font-stack;
+  min-height: 100vh;
 }
 
-header {
+a {
+  transition: background-size 0.25s ease-in-out;
+  color: inherit;
+  font-weight: $font-weight-link;
+  text-decoration: none;
+  background-image:
+    linear-gradient(
+      $color-action,
+      $color-action 100%
+    ),
+    radial-gradient(
+      circle at center,
+      $color-action,
+      $color-action 50%,
+      transparent 50%,
+      transparent
+    );
+  background-size: 0 $size-tiny, $space-xs $size-tiny;
+  background-repeat: no-repeat, repeat-x;
+  background-position: 50% 100%;
+  padding: 0 0 $space-xxs;
+  margin: 0 0 (-($space-xxs));
+  display: inline-block;
+
+  &:hover, &:focus {
+    background-size: 200% $size-tiny, $space-xs $size-tiny;
+  }
+
+  &:focus {
+    outline: $size-hairline dotted currentColor;
+    outline-offset: $size-tiny;
+  }
+}
+
+.header-container {
   background: $color-background-inverted;
   color: $color-text-inverted;
 }
 
-footer {
+.footer-container {
   background: transparentize($color-background-inverted, 0.95)
 }

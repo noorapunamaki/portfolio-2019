@@ -1,0 +1,9 @@
+$breakpoints: (
+  sidebar: 50rem
+);
+
+@mixin responsive($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

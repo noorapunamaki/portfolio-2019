@@ -1,0 +1,37 @@
+.illustration-svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-width: 1;
+  width: 100%;
+  max-width: 16rem;
+
+  .gradient {
+    stop {
+      stop-color: $color-action;
+      stop-opacity: 0.15;
+
+      &:last-child {
+        stop-opacity: 0.05;
+      }
+    }
+  }
+
+  .bg {
+    fill: url(#bg-gradient);
+  }
+
+  .fill {
+    fill: $color-accent;
+    stroke: $color-background;
+    stroke-width: 2;
+  }
+
+  .line {
+    stroke: $color-text;
+  }
+
+  .accent {
+    stroke: $color-accent;
+  }
+}

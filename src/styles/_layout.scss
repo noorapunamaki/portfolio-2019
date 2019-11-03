@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+}
+
+$containers: (
+  header, main, footer
+);
+
+@include responsive(sidebar) {
+  @supports (display: grid) {
+    .root {
+      display: grid;
+      grid-template:
+        "header main" 1fr
+        "header footer" auto / 16em auto
+    }
+
+    @each $container in $containers {
+      .#{$container}-container {
+        grid-area: $container;
+      }
+    }
+  }
+}
