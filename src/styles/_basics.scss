@@ -1,0 +1,13 @@
+body {
+  background: $color-background;
+  color: $color-text;
+}
+
+header {
+  background: $color-background-inverted;
+  color: $color-text-inverted;
+}
+
+footer {
+  background: transparentize($color-background-inverted, 0.95)
+}
