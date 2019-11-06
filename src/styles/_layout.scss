@@ -6,6 +6,7 @@
 
 .main-container {
   flex: 1;
+  overflow: auto;
 }
 
 $containers: (
@@ -18,7 +19,8 @@ $containers: (
       display: grid;
       grid-template:
         "header main" 1fr
-        "header footer" auto / 16em auto
+        "header footer" auto / 16em auto;
+      height: 100vh;
     }
 
     @each $container in $containers {

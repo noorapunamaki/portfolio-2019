@@ -1,37 +1,45 @@
-.illustration-svg {
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  stroke-width: 1;
-  width: 100%;
-  max-width: 16rem;
+.illustration-container {
+  padding: $space-m $space-s;
 
-  .gradient {
-    stop {
-      stop-color: $color-action;
-      stop-opacity: 0.15;
+  .wrap, .group {
+    display: flex;
+  }
 
-      &:last-child {
-        stop-opacity: 0.05;
-      }
+  .wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .group {
+    justify-content: center;
+  }
+
+  @include responsive(tiny) {
+    padding: $space-xl $space-m;
+  }
+
+  @include responsive(illustrations-fit) {
+    .wrap {
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .group {
+      flex-direction: column;
+      margin: 0 1rem;
     }
   }
 
-  .bg {
-    fill: url(#bg-gradient);
-  }
-
-  .fill {
-    fill: $color-accent;
-    stroke: $color-background;
-    stroke-width: 2;
-  }
-
-  .line {
-    stroke: $color-text;
-  }
-
-  .accent {
-    stroke: $color-accent;
+  .illustration {
+    margin: 0.5rem 0;
+    &.-sm {
+      width: 6rem;
+    }
+    &.-md {
+      width: 8rem;
+    }
+    &.-lg {
+      width: 18rem;
+    }
   }
 }

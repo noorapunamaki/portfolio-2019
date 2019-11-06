@@ -1,9 +1,11 @@
-$color-white: #f9f2f3;
+$color-white: #fffefe;
 $color-black: #25292b;
 $color-aqua: #00aeef;
-$color-pink: #fc7fb2;
 
 $color-background: $color-white;
+$color-background-alt1: mix($color-black, $color-white, 8);
+$color-background-alt2: mix($color-black, $color-white, 6);
+$color-background-alt3: mix($color-black, $color-white, 12);
 $color-text: $color-black;
 $color-border: transparentize($color-text, 0.75);
 
@@ -12,18 +14,19 @@ $color-text-inverted: $color-white;
 $color-border-inverted: transparentize($color-text-inverted, 0.9);
 
 $color-action: $color-aqua;
-$color-accent: $color-pink;
+$color-action-dk: darken($color-aqua, 10);
 
 $color-text-action-inverted: lighten($color-action, 40%);
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
-$font-stack: 'Lato', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+$font-stack-body: 'Lato', sans-serif;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
 $font-weight-body: 400;
+$font-weight-lead: 300;
 $font-weight-heading: 900;
 $font-weight-link: 700;
 
@@ -34,6 +37,7 @@ $space-xs: $space-unit;
 $space-s: $space-unit * 2;
 $space-m: $space-unit * 4;
 $space-l: $space-unit * 8;
+$space-xl: $space-unit * 16;
 
 $size-hairline: $space-unit / 4;
 $size-tiny: $space-unit / 2;
@@ -41,3 +45,7 @@ $size-indicator: $space-unit;
 
 $border: $size-hairline solid $color-border;
 $border-inverted: $size-hairline solid $color-border-inverted;
+
+@function px-to-em($value) {
+  @return $value / 16 * 1em;
+}

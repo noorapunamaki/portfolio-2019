@@ -1,0 +1,25 @@
+.prints {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 0 (-($space-m));
+
+  @include responsive(illustrations-fit) {
+    flex-wrap: nowrap;
+  }
+}
+
+.print {
+  &:nth-child(odd) {
+    transform: rotate(-2.5deg);
+  }
+
+  &:nth-child(even) {
+    transform: rotate(2.5deg);
+  }
+
+  .img {
+    max-width: 100%;
+  }
+}

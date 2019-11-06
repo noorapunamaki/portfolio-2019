@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 344">
+  <defs>
+    <linearGradient id="tablet-a" x1="50%" x2="50%" y1="100%" y2="50%">
+      <stop offset="0%" stop-color="#DDD" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#DDD"/>
+    </linearGradient>
+    <linearGradient id="tablet-b" x1="100%" x2="50%" y1="50%" y2="50%">
+      <stop offset="0%" stop-color="#DDD" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#DDD"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="nonzero">
+    <path fill="#000" fill-opacity=".025" d="M196.8 15l164.1 316H22a7 7 0 01-7-7V22a7 7 0 017-7h174.8z"/>
+    <path fill="#FFF" fill-opacity=".1" d="M196.8 15H428a7 7 0 017 7v302a7 7 0 01-7 7h-67L196.7 15z"/>
+    <path fill="#FFF" d="M18 2h414a16 16 0 0116 16v310a16 16 0 01-16 16H18a16 16 0 01-16-16V18A16 16 0 0118 2zm4 12a8 8 0 00-8 8v302a8 8 0 008 8h406a8 8 0 008-8V22a8 8 0 00-8-8H22z"/>
+    <path fill="#DDD" d="M18 4A14 14 0 004 18v310a14 14 0 0014 14h414a14 14 0 0014-14V18a14 14 0 00-14-14H18zm0-2h414a16 16 0 0116 16v310a16 16 0 01-16 16H18a16 16 0 01-16-16V18A16 16 0 0118 2z"/>
+    <path fill="url(#tablet-a)" d="M33 0h14c.6 0 1 .4 1 1v1H32V1c0-.6.4-1 1-1z"/>
+    <path fill="url(#tablet-a)" d="M53 0h14c.6 0 1 .4 1 1v1H52V1c0-.6.4-1 1-1z"/>
+    <path fill="url(#tablet-b)" d="M1 20h1v20H1a1 1 0 01-1-1V21c0-.6.4-1 1-1z"/>
+  </g>
+</svg>

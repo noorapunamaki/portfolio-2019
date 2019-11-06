@@ -1,5 +1,9 @@
 $breakpoints: (
-  sidebar: 50rem
+  tiny: 25rem,
+  illustrations-fit: 40rem,
+  wide: 44rem,
+  sidebar: 50rem,
+  wide-and-sidebar: 60rem
 );
 
 @mixin responsive($breakpoint) {

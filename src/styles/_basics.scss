@@ -1,7 +1,7 @@
 body {
   background: $color-background;
   color: $color-text;
-  font: $font-weight-body 100%/1.5 $font-stack;
+  font: $font-weight-body 100%/1.5 $font-stack-body;
   min-height: 100vh;
 }
 
@@ -46,4 +46,76 @@ a {
 
 .footer-container {
   background: transparentize($color-background-inverted, 0.95)
+}
+
+%heading {
+  line-height: 1;
+  font-weight: $font-weight-heading;
+  margin-bottom: 1.5rem;
+}
+
+@for $i from 1 through 4 {
+  h#{$i} {
+    @extend %heading;
+  }
+}
+
+$typography-scale: ( p, '.lead', h3, h2, h1);
+
+@mixin screen-size-narrow {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  .lead {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@mixin screen-size-wide {
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  .lead {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+@include screen-size-narrow;
+
+@include responsive(wide) {
+  @include screen-size-wide;
+}
+
+@include responsive(sidebar) {
+  @include screen-size-narrow;
+}
+
+@include responsive(wide-and-sidebar) {
+  @include screen-size-wide;
+}
+
+.lead {
+  line-height: 1.25;
+  font-weight: $font-weight-lead;
+}
+
+p {
+  margin-top: 1rem;
 }
