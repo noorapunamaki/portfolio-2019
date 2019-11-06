@@ -3,9 +3,12 @@ import React from 'react';
 import Mobile from '../images/devices/mobile.svg';
 import Tablet from '../images/devices/tablet.svg';
 import Laptop from '../images/devices/laptop.svg';
+import FlyerCover from '../images/devices/flyercover.svg';
+import FlyerOpen from '../images/devices/flyeropen.svg';
+import Magazine from '../images/devices/magazine.svg';
 
 interface ScreenshotProps {
-  type: 'mobile' | 'tablet' | 'laptop';
+  type: 'mobile' | 'tablet' | 'laptop' | 'flyercover' | 'flyeropen' | 'magazine';
   src: string;
   alt: string;
   link?: string;
@@ -15,7 +18,10 @@ interface ScreenshotProps {
 const device = {
   mobile: Mobile,
   tablet: Tablet,
-  laptop: Laptop
+  laptop: Laptop,
+  flyercover: FlyerCover,
+  flyeropen: FlyerOpen,
+  magazine: Magazine
 }
 
 const Screenshot: React.FC<ScreenshotProps> = ({ type, src, alt, link, label }) =>
@@ -25,7 +31,7 @@ const Screenshot: React.FC<ScreenshotProps> = ({ type, src, alt, link, label }) 
     </div>
     <img src={device[type]} alt='' className='device' />
     {link &&
-      <a className='link' href='https://github.com/wappuradio/webbi2019'>{label ? label : 'Lue lisää'}</a>
+      <a className='link' href={link}>{label ? label : 'Lue lisää'}</a>
     }
   </div>;
 

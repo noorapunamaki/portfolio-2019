@@ -10,6 +10,11 @@ import KassaIOS from './images/screens/kassa-ios.png';
 import KassaBO from './images/screens/kassa-bo.png';
 import PH from './images/screens/ph.png';
 import Wappuradio from './images/screens/wappuradio.png';
+import Ilmio from './images/screens/ilmio.png';
+import KassaFlyerEtu from './images/screens/kassa-flyer-etu.png';
+import KassaFlyerAuki from './images/screens/kassa-flyer.png';
+import KassaFlyerTaka from './images/screens/kassa-flyer-taka.png';
+import COFFlyer from './images/screens/cof-flyer.png';
 
 import IllustrationKassa from './images/illustrations/kassa.svg';
 import IllustrationPaketti from './images/illustrations/paketti.svg';
@@ -17,9 +22,6 @@ import IllustrationAspa from './images/illustrations/aspa.svg';
 import IllustrationStartti from './images/illustrations/startti.svg';
 import IllustrationSuper from './images/illustrations/super.svg';
 import IllustrationLasku from './images/illustrations/lasku.svg';
-
-import PrintKassa from './images/prints/kassa.png';
-import PrintIlmio from './images/prints/ilmio.png';
 
 const App: React.FC = () =>
   <>
@@ -55,22 +57,23 @@ const App: React.FC = () =>
       </Section.Container>
       <Section.Container>
         <Section.Text>
-          <h3>Sisällöllä on minulle väliä</h3>
+          <h3>Välitän sisällöstä</h3>
           <p>Kauniit käyttöliittymät ja nätit taitot miellyttävät silmää, mutta minulle tärkeintä on se, että ne välittävät viestin oikein. En halua visuaalisuuden menevän käytettävyyden edelle, vaan tukevan sitä. Kuvituskuvat tulevat vastaan silloin, kun sanat eivät riitä.</p>
         </Section.Text>
-        <div className='prints'>
-          <div className='print'>
-            <img className='img' src={PrintIlmio} alt='Suomi-ilmiö-lehti' />
-          </div>
-          <div className='print'>
-            <img className='img' src={PrintKassa} alt='OP Kassa -flyer' />
-          </div>
-        </div>
+        <Section.Projects>
+          <Screenshot type='flyercover' src={COFFlyer} alt='Checkout Finland -flyer' />
+          <Screenshot type='magazine' src={Ilmio} alt='Suomi-ilmiö-lehti' />
+        </Section.Projects>
         <Illustration.Container>
           <Illustration.Group src={[IllustrationPaketti, IllustrationAspa]} size='md' />
           <Illustration.Group src={[IllustrationKassa]} size='lg' />
           <Illustration.Group src={[IllustrationStartti, IllustrationSuper, IllustrationLasku]} size='sm' />
         </Illustration.Container>
+        <Section.Projects>
+          <Screenshot type='flyercover' src={KassaFlyerEtu} alt='OP Kassa -flyer, etukansi' />
+          <Screenshot type='flyeropen' src={KassaFlyerAuki} alt='OP Kassa -flyer' />
+          <Screenshot type='flyercover' src={KassaFlyerTaka} alt='OP Kassa -flyer, takakansi' />
+        </Section.Projects>
       </Section.Container>
     </main>
   </>;

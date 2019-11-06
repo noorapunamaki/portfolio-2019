@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 748 526">
+  <defs>
+    <linearGradient id="magazine-a" x1="0%" x2="50%" y1="50%" y2="50%">
+      <stop offset="0%" stop-color="#DDD" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#DDD"/>
+    </linearGradient>
+    <linearGradient id="magazine-b" x1="50%" x2="50%" y1="100%" y2="66.6%">
+      <stop offset="0%" stop-color="#DDD" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#DDD"/>
+    </linearGradient>
+    <linearGradient id="magazine-c" x1="100%" x2="66.6%" y1="50%" y2="50%">
+      <stop offset="0%" stop-color="#DDD" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#DDD"/>
+    </linearGradient>
+    <linearGradient id="magazine-e" x1="100%" x2="50%" y1="50%" y2="50%">
+      <stop offset="0%" stop-opacity=".05"/>
+      <stop offset="100%" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="nonzero">
+    <path fill="url(#magazine-a)" d="M745 518V0h3v520h-1a2 2 0 01-2-2z"/>
+    <path fill="url(#magazine-b)" d="M374 4V3l374-3v3z"/>
+    <path fill="url(#magazine-a)" d="M742 521V3h3v520h-1a2 2 0 01-2-2z"/>
+    <path fill="url(#magazine-b)" d="M374 6V4l370-1v3z"/>
+    <path fill="url(#magazine-c)" d="M3 520H0V0h3z"/>
+    <path fill="url(#magazine-c)" d="M6 523H3V3h3z"/>
+    <path fill="url(#magazine-b)" d="M374 4L2 3V0l372 3z"/>
+    <path fill="url(#magazine-b)" d="M374 6H3V3l371 1z"/>
+    <path fill="url(#magazine-e)" d="M374 526V6h368v520z"/>
+    <path fill="url(#magazine-e)" d="M374 526H6V6h368z"/>
+  </g>
+</svg>

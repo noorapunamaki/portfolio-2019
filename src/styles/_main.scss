@@ -3,6 +3,10 @@
     position: relative;
     overflow: hidden;
 
+    & + .section {
+      border-top: $border;
+    }
+
     .wrap {
       max-width: 68em;
       padding: 0 $space-m;
@@ -67,60 +71,60 @@
     }
 
     &:nth-child(4n - 2) {
-      background-color: $color-background-alt1;
+      background-color: $color-background;
       background-image:
         linear-gradient(
           45deg,
           transparent 25%,
-          $color-background-alt2 25%,
-          $color-background-alt2 50%,
+          $color-background-alt 25%,
+          $color-background-alt 50%,
           transparent 50%,
           transparent 75%,
-          $color-background-alt2 75%
+          $color-background-alt 75%
         );
       background-size: 3em 3em;
     }
 
     &:nth-child(4n - 1) {
-      background-color: $color-background-alt3;
+      background-color: $color-background-alt;
       background-image:
         linear-gradient(
           -45deg,
-          transparentize($color-background-alt1, 1) 75%,
-          $color-background-alt1 75%
+          transparentize($color-background, 1) 75%,
+          $color-background 75%
         ), linear-gradient(
           45deg,
-          $color-background-alt1 25%,
-          transparentize($color-background-alt1, 1) 25%
+          $color-background 25%,
+          transparentize($color-background, 1) 25%
         ), linear-gradient(
           -45deg,
-          $color-background-alt1 25%,
-          transparentize($color-background-alt1, 1) 25%
+          $color-background 25%,
+          transparentize($color-background, 1) 25%
         ), linear-gradient(
           45deg,
-          transparentize($color-background-alt1, 1) 75%,
-          $color-background-alt1 75%
+          transparentize($color-background, 1) 75%,
+          $color-background 75%
         );
       background-position: 50% 50%;
       background-size: 3em 3em;
     }
 
     &:nth-child(4n) {
-      background: $color-background-alt2;
+      background: $color-background-alt;
       background-image:
-        radial-gradient($color-background-alt1 30%, transparent 0),
-        radial-gradient($color-background-alt1 30%, transparent 0);
+        radial-gradient($color-background 30%, transparent 0),
+        radial-gradient($color-background 30%, transparent 0);
       background-size: 3em 3em;
       background-position: 0 0, 1.5em 1.5em;
     }
 
     &:nth-child(4n + 1) {
-      background-color: $color-background-alt3;
+      background-color: $color-background-alt;
       background-image:
-        linear-gradient(135deg, $color-background-alt1 25%, transparent 25%),
-        linear-gradient(225deg, $color-background-alt1 25%, transparent 25%),
-        linear-gradient(315deg, $color-background-alt1 25%, transparent 25%),
-        linear-gradient(45deg, $color-background-alt1 25%, transparent 25%);
+        linear-gradient(135deg, $color-background 25%, transparent 25%),
+        linear-gradient(225deg, $color-background 25%, transparent 25%),
+        linear-gradient(315deg, $color-background 25%, transparent 25%),
+        linear-gradient(45deg, $color-background 25%, transparent 25%);
       background-position: -1.5em 0, -1.5em 0, 0 0, 0 0;
       background-size: 3em 3em;
     }

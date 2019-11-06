@@ -1,5 +1,6 @@
 .illustration-container {
-  padding: $space-m $space-s;
+  padding: 0 $space-s $space-m;
+  margin: -($space-l) 0 (-($space-m));
 
   .wrap, .group {
     display: flex;
@@ -15,10 +16,12 @@
   }
 
   @include responsive(tiny) {
-    padding: $space-xl $space-m;
+    padding: 0 $space-m $space-xl;
   }
 
   @include responsive(illustrations-fit) {
+    margin: -($space-xl) 0 (-($space-l));
+
     .wrap {
       justify-content: center;
       flex-direction: row;

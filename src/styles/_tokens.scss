@@ -3,15 +3,12 @@ $color-black: #25292b;
 $color-aqua: #00aeef;
 
 $color-background: $color-white;
-$color-background-alt1: mix($color-black, $color-white, 8);
-$color-background-alt2: mix($color-black, $color-white, 6);
-$color-background-alt3: mix($color-black, $color-white, 12);
+$color-background-alt: mix($color-black, $color-white, 2);
 $color-text: $color-black;
-$color-border: transparentize($color-text, 0.75);
+$color-border: transparentize($color-text, 0.9);
 
 $color-background-inverted: $color-black;
 $color-text-inverted: $color-white;
-$color-border-inverted: transparentize($color-text-inverted, 0.9);
 
 $color-action: $color-aqua;
 $color-action-dk: darken($color-aqua, 10);
@@ -44,7 +41,6 @@ $size-tiny: $space-unit / 2;
 $size-indicator: $space-unit;
 
 $border: $size-hairline solid $color-border;
-$border-inverted: $size-hairline solid $color-border-inverted;
 
 @function px-to-em($value) {
   @return $value / 16 * 1em;

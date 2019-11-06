@@ -25,6 +25,33 @@ $devices: (
     bottom: 38,
     left: 56,
     radius: 4
+  ),
+  magazine: (
+    width: 748,
+    height: 526,
+    top: 6,
+    right: 6,
+    bottom: 0,
+    left: 6,
+    radius: 0
+  ),
+  flyercover: (
+    width: 174,
+    height: 370,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    radius: 0
+  ),
+  flyeropen: (
+    width: 520,
+    height: 368,
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    radius: 0
   )
 );
 
@@ -85,10 +112,17 @@ $devices: (
 
   &::after {
     content: '';
+    background: rgba(0, 0, 0, 0.0125);
     position: absolute;
-    box-shadow:
-      inset 0 0 1em 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0.0625em 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &.-mobile, &.-tablet, &.-laptop {
+    &::after {
+      background: none;
+      box-shadow:
+        inset 0 0 1em 0 rgba(0, 0, 0, 0.05),
+        inset 0 0 0.0625em 0 rgba(0, 0, 0, 0.4);
+    }
   }
 
   .device, &::after {
@@ -122,11 +156,19 @@ $devices: (
 
 
   @include responsive(tiny) {
-    &:nth-child(odd) {
+    &:nth-child(4n - 3) {
       transform: rotate(-5deg);
     }
 
-    &:nth-child(even) {
+    &:nth-child(4n - 2) {
+      transform: rotate(2.5deg);
+    }
+
+    &:nth-child(4n - 1) {
+      transform: rotate(-2.5deg);
+    }
+
+    &:nth-child(4n) {
       transform: rotate(5deg);
     }
   }

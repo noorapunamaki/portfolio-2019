@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174 368">
+  <defs>
+    <linearGradient id="flyercover-a" x1="100%" x2="0%" y1="50%" y2="50%">
+      <stop offset="0%" stop-opacity=".05"/>
+      <stop offset="50%" stop-opacity="0"/>
+      <stop offset="100%" stop-opacity=".05"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="nonzero">
+    <path fill="url(#flyercover-a)" d="M174 368H0V0h174z"/>
+  </g>
+</svg>
