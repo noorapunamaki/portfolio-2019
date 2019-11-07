@@ -138,18 +138,29 @@ $devices: (
     &.-#{$name} {
       width: px-to-em(map-get($values, width));
       height: px-to-em(map-get($values, height));
-      padding:
-        px-to-em(map-get($values, top))
-        px-to-em(map-get($values, right))
-        px-to-em(map-get($values, bottom))
-        px-to-em(map-get($values, left));
+      // padding:
+      //   px-to-em(map-get($values, top))
+      //   px-to-em(map-get($values, right))
+      //   px-to-em(map-get($values, bottom))
+      //   px-to-em(map-get($values, left));
 
-      &::after {
+      &::after, .screen {
         top: px-to-em(map-get($values, top));
         right: px-to-em(map-get($values, right));
         bottom: px-to-em(map-get($values, bottom));
         left: px-to-em(map-get($values, left));
         border-radius: px-to-em(map-get($values, radius));
+      }
+
+      .screen {
+        width:
+          px-to-em(map-get($values, width))
+          - px-to-em(map-get($values, right))
+          - px-to-em(map-get($values, left));
+        height:
+          px-to-em(map-get($values, height))
+          - px-to-em(map-get($values, top))
+          - px-to-em(map-get($values, bottom));
       }
     }
   }
