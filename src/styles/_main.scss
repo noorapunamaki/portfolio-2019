@@ -1,5 +1,6 @@
-.main-container {
+.main-container, .project-container {
   overflow-x: hidden;
+
   .section {
     position: relative;
 
@@ -10,7 +11,6 @@
     .wrap {
       max-width: 78em;
       margin: auto;
-      padding: 0 $space-m;
     }
 
     .text {
@@ -26,10 +26,6 @@
     }
 
     @include responsive(tiny) {
-      .wrap {
-        padding: 0 $space-l;
-      }
-
       .text {
         margin: $space-xl auto $space-xl $space-l;
       }
@@ -160,6 +156,26 @@
         linear-gradient(45deg, $color-background 25%, transparent 25%);
       background-position: -1.5em 0, -1.5em 0, 0 0, 0 0;
       background-size: 3em 3em;
+    }
+  }
+}
+
+.main-container {
+  .wrap {
+    padding: 0 $space-m;
+
+    @include responsive(tiny) {
+      padding: 0 $space-l;
+    }
+  }
+}
+
+.project-container {
+  .wrap {
+    padding: $space-m;
+
+    @include responsive(tiny) {
+      padding: $space-l;
     }
   }
 }

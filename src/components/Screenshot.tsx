@@ -7,12 +7,17 @@ import FlyerCover from '../images/devices/flyercover.svg';
 import FlyerOpen from '../images/devices/flyeropen.svg';
 import Magazine from '../images/devices/magazine.svg';
 
+interface LinkProps {
+  href?: string;
+  label: string;
+  pdf?: string;
+}
+
 interface ScreenshotProps {
   type: 'mobile' | 'tablet' | 'laptop' | 'flyercover' | 'flyeropen' | 'magazine';
   src: string;
   alt: string;
-  link?: string;
-  label?: string;
+  link?: LinkProps;
 }
 
 const device = {
@@ -24,15 +29,16 @@ const device = {
   magazine: Magazine
 }
 
-const Screenshot: React.FC<ScreenshotProps> = ({ type, src, alt, link, label }) =>
+const Screenshot: React.FC<ScreenshotProps> = ({ type, src, alt, link }) =>
   <div className={`screenshot-container -${type}`}>
     <div className='screen'>
       <img src={src} alt={alt} className='img' />
     </div>
     <img src={device[type]} alt='' className='device' />
     {link &&
-      <a className='link' href={link}>{label ? label : 'Lue lisää'}</a>
-    }
+      <a className='link' href={link.pdf ? `../projects/${link.pdf}.pdf` : link.href} target='_blank' rel='noopener noreferrer'>
+        {link.label}
+      </a>}
   </div>;
 
 export default Screenshot;
