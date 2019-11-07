@@ -15,6 +15,7 @@ import KassaFlyerEtu from './images/screens/kassa-flyer-etu.png';
 import KassaFlyerAuki from './images/screens/kassa-flyer.png';
 import KassaFlyerTaka from './images/screens/kassa-flyer-taka.png';
 import COFFlyer from './images/screens/cof-flyer.png';
+import PHFlyer from './images/screens/ph-flyer.png';
 
 import IllustrationKassa from './images/illustrations/kassa.svg';
 import IllustrationPaketti from './images/illustrations/paketti.svg';
@@ -67,9 +68,8 @@ const App: React.FC = () =>
         </Illustration.Container>
         <Section.Projects size='sm'>
           <Screenshot type='flyercover' src={COFFlyer} alt='Checkout Finland -flyer' />
+          <Screenshot type='flyercover' src={PHFlyer} alt='Checkout Finland -flyer' />
           <Screenshot type='magazine' src={Ilmio} alt='Suomi-ilmiö-lehti' />
-        </Section.Projects>
-        <Section.Projects size='sm'>
           <Screenshot type='flyercover' src={KassaFlyerEtu} alt='OP Kassa -flyer, etukansi' />
           <Screenshot type='flyeropen' src={KassaFlyerAuki} alt='OP Kassa -flyer' />
           <Screenshot type='flyercover' src={KassaFlyerTaka} alt='OP Kassa -flyer,' />
