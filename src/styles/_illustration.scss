@@ -33,6 +33,10 @@
     }
   }
 
+  @include responsive(rows-fit) {
+    margin: $space-l 0 0;
+  }
+
   .illustration {
     margin: 0.5rem 0;
     &.-sm {

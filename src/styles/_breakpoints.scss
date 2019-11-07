@@ -1,9 +1,10 @@
 $breakpoints: (
   tiny: 25rem,
   illustrations-fit: 40rem,
-  wide: 44rem,
+  wide: 46rem,
   sidebar: 50rem,
-  wide-and-sidebar: 60rem
+  wide-and-sidebar: 60rem,
+  rows-fit: 82rem,
 );
 
 @mixin responsive($breakpoint) {

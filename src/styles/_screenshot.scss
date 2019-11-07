@@ -178,6 +178,7 @@ $devices: (
   }
 
   .link {
+    font-size: 0.85em;
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
@@ -186,7 +187,7 @@ $devices: (
     background: $color-action-dk;
     color: $color-background;
     border-radius: 1rem;
-    padding: 0.25rem 1rem;
+    padding: 0.5rem 1rem;
     z-index: 1;
 
     &:hover {

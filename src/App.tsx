@@ -60,19 +60,19 @@ const App: React.FC = () =>
           <h3>Välitän sisällöstä</h3>
           <p>Kauniit käyttöliittymät ja nätit taitot miellyttävät silmää, mutta minulle tärkeintä on se, että ne välittävät viestin oikein. En halua visuaalisuuden menevän käytettävyyden edelle, vaan tukevan sitä. Kuvituskuvat tulevat vastaan silloin, kun sanat eivät riitä.</p>
         </Section.Text>
-        <Section.Projects>
-          <Screenshot type='flyercover' src={COFFlyer} alt='Checkout Finland -flyer' />
-          <Screenshot type='magazine' src={Ilmio} alt='Suomi-ilmiö-lehti' />
-        </Section.Projects>
         <Illustration.Container>
           <Illustration.Group src={[IllustrationPaketti, IllustrationAspa]} size='md' />
           <Illustration.Group src={[IllustrationKassa]} size='lg' />
           <Illustration.Group src={[IllustrationStartti, IllustrationSuper, IllustrationLasku]} size='sm' />
         </Illustration.Container>
-        <Section.Projects>
+        <Section.Projects size='sm'>
+          <Screenshot type='flyercover' src={COFFlyer} alt='Checkout Finland -flyer' />
+          <Screenshot type='magazine' src={Ilmio} alt='Suomi-ilmiö-lehti' />
+        </Section.Projects>
+        <Section.Projects size='sm'>
           <Screenshot type='flyercover' src={KassaFlyerEtu} alt='OP Kassa -flyer, etukansi' />
           <Screenshot type='flyeropen' src={KassaFlyerAuki} alt='OP Kassa -flyer' />
-          <Screenshot type='flyercover' src={KassaFlyerTaka} alt='OP Kassa -flyer, takakansi' />
+          <Screenshot type='flyercover' src={KassaFlyerTaka} alt='OP Kassa -flyer,' />
         </Section.Projects>
       </Section.Container>
     </main>

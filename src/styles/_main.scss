@@ -1,7 +1,7 @@
 .main-container {
+  overflow-x: hidden;
   .section {
     position: relative;
-    overflow: hidden;
 
     & + .section {
       border-top: $border;
@@ -68,6 +68,38 @@
     @include responsive(wide-and-sidebar) {
       .text { width: (3/4)*100%; }
       .projects { margin-bottom: 6rem; }
+    }
+
+    @include responsive(rows-fit) {
+      .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .projects {
+        margin: $space-xl (-($space-m));
+        flex: 3;
+
+        &.-sm {
+          font-size: 1em;
+        }
+      }
+
+      .text {
+        width: auto;
+        flex: 2;
+      }
+
+      &:nth-child(even) {
+        .wrap {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .projects + .projects {
+        margin-top: 0;
+      }
     }
 
     &:nth-child(4n - 2) {
