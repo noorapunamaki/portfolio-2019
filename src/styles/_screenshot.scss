@@ -212,7 +212,8 @@ $devices: (
     font-size: 0.85em;
     position: absolute;
     bottom: 0.5rem;
-    right: 0.5rem;
+    right: 50%;
+    transform: translate(50%, 0);
     margin: 0;
     padding: 0;
     background: $color-action-dk;
@@ -220,9 +221,15 @@ $devices: (
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     z-index: 1;
+    white-space: nowrap;
 
     &:hover {
       opacity: 0.9;
+    }
+
+    @include responsive(tiny) {
+      right: 0.5rem;
+      transform: none;
     }
   }
 }
