@@ -6,7 +6,8 @@ $devices: (
     right: 8,
     bottom: 6,
     left: 8,
-    radius: 12
+    radius: 12,
+    type: digital
   ),
   tablet: (
     width: 450,
@@ -15,7 +16,8 @@ $devices: (
     right: 14,
     bottom: 12,
     left: 14,
-    radius: 8
+    radius: 8,
+    type: digital
   ),
   laptop: (
     width: 624,
@@ -24,7 +26,8 @@ $devices: (
     right: 56,
     bottom: 38,
     left: 56,
-    radius: 4
+    radius: 4,
+    type: digital
   ),
   magazine: (
     width: 748,
@@ -33,7 +36,8 @@ $devices: (
     right: 6,
     bottom: 0,
     left: 6,
-    radius: 0
+    radius: 0,
+    type: print
   ),
   flyercover: (
     width: 174,
@@ -42,7 +46,8 @@ $devices: (
     right: 0,
     bottom: 0,
     left: 0,
-    radius: 0
+    radius: 0,
+    type: print
   ),
   flyeropen: (
     width: 520,
@@ -51,7 +56,8 @@ $devices: (
     right: 0,
     bottom: 0,
     left: 0,
-    radius: 0
+    radius: 0,
+    type: print
   )
 );
 
@@ -112,17 +118,7 @@ $devices: (
 
   &::after {
     content: '';
-    background: rgba(0, 0, 0, 0.0125);
     position: absolute;
-  }
-
-  &.-mobile, &.-tablet, &.-laptop {
-    &::after {
-      background: none;
-      box-shadow:
-        inset 0 0 1em 0 rgba(0, 0, 0, 0.05),
-        inset 0 0 0.0625em 0 rgba(0, 0, 0, 0.4);
-    }
   }
 
   .device, &::after {
@@ -135,32 +131,56 @@ $devices: (
   }
 
   @each $name, $values in $devices {
+    $w: map-get($values, width);
+    $h: map-get($values, height);
+    $t: map-get($values, top);
+    $r: map-get($values, right);
+    $b: map-get($values, bottom);
+    $l: map-get($values, left);
+
+    $radius: map-get($values, radius);
+    $type: map-get($values, type);
+
     &.-#{$name} {
-      width: px-to-em(map-get($values, width));
-      height: px-to-em(map-get($values, height));
-      // padding:
-      //   px-to-em(map-get($values, top))
-      //   px-to-em(map-get($values, right))
-      //   px-to-em(map-get($values, bottom))
-      //   px-to-em(map-get($values, left));
+      width: px-to-em($w);
+      height: px-to-em($h);
 
       &::after, .screen {
-        top: px-to-em(map-get($values, top));
-        right: px-to-em(map-get($values, right));
-        bottom: px-to-em(map-get($values, bottom));
-        left: px-to-em(map-get($values, left));
-        border-radius: px-to-em(map-get($values, radius));
+        top: px-to-em($t);
+        right: px-to-em($r);
+        bottom: px-to-em($b);
+        left: px-to-em($l);
+        border-radius: px-to-em($radius);
       }
 
       .screen {
         width:
-          px-to-em(map-get($values, width))
-          - px-to-em(map-get($values, right))
-          - px-to-em(map-get($values, left));
+          px-to-em($w)
+          - px-to-em($r)
+          - px-to-em($l);
         height:
-          px-to-em(map-get($values, height))
-          - px-to-em(map-get($values, top))
-          - px-to-em(map-get($values, bottom));
+          px-to-em($h)
+          - px-to-em($t)
+          - px-to-em($b);
+      }
+
+
+      @if $type == digital {
+        &::after {
+          box-shadow:
+            inset 0 0 1em 0 rgba(0, 0, 0, 0.05),
+            inset 0 0 0.0625em 0 rgba(0, 0, 0, 0.4);
+        }
+      } @else if $type == print {
+        box-shadow:
+          0 0.5em 2em -1em rgba(0, 0, 0, 0.5),
+          0 0 2em -1em rgba(0, 0, 0, 0.25);
+
+        &::after {
+          background: rgba(0, 0, 0, 0.0125);
+          box-shadow:
+            inset 0 0 2em 0 rgba(255, 255, 255, 0.5);
+        }
       }
     }
   }
