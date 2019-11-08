@@ -1,8 +1,8 @@
 .main-container, .project-container {
-  overflow-x: hidden;
 
   .section {
     position: relative;
+    overflow: hidden;
 
     & + .section {
       border-top: $border;
